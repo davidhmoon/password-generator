@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random password generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="SliderValue();">
+    <div class="container">
+        <div>
+            <p>Generate a</p>
+            <p class="green">random password</p>
+            <P class="small">Never use an insecure password again.</P>
+            <div class="slidecontainer">
+                <P>Password length: <span id="length"></span></P>
+                <input type="range" min="1" max="100" value="15" class="slider" id="myRange">
+            </div>
+            <button onclick="generatePasswords();">Generate passwords</button>
+        </div>
+        <div class="line">
+            <p id="firstField" class="field" onclick="copyFirst();"></p>
+            <p id="secondField" class="field" onclick="copySecond();"></p>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
